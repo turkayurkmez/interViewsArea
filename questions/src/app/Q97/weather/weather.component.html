@@ -1,0 +1,13 @@
+<h3>Question 97</h3>
+<div>
+    <p>{{weather.city}}, {{weather.celcius}}</p>
+    <div *ngSwitch="weather.summary">
+        <img *ngSwitchCase="'Rain'" src="rain.jpg"/>
+        <img *ngSwitchCase="'Snow'" src="snow.jpg"/>
+        <img *ngSwitchCase="'Sunny'" src="rain.jpg"/>
+
+
+    </div>
+
+</div>
+<hr>

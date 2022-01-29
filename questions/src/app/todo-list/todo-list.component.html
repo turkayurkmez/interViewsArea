@@ -1,0 +1,12 @@
+<h3>Question 74, 75, 76, 77, 78</h3>
+<button (click)="filter()">Filter</button>
+<input #item type="text" id="newItem">
+<button (click)="addNewItem(item.value)" >Add New Item</button>
+<h4>There are a total of <span id="itemCount">{{getInCompletedTaskCount}}</span> unfinished tasks.</h4>
+<ul *ngFor="let item of todoItems">
+    <li>
+       {{item.name}} <input type="checkbox" [(ngModel)]="item.isDone"> 
+       <span id="state" [ngClass]="item.isDone ? 'green':'red'">{{ item.isDone ? "Done":"Undone" }}</span>
+    </li>
+</ul>
+<hr>
