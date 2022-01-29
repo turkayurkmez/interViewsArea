@@ -14,7 +14,7 @@ export class ShowHideComponent implements OnInit {
 
   isShowing :boolean = false;
   clicked(){    
-    
+     
   }
 
    message():string{
