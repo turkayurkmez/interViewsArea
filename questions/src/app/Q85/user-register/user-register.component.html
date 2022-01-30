@@ -1,0 +1,8 @@
+<h3>Question 85</h3>
+   <h4>User Register Form</h4>
+   <form #newUser="ngForm" >
+     <input #userName="ngModel" [(ngModel)]="username" type="text" name="userName" id="userName" required>
+     <span *ngIf="userName.invalid && userName.dirty">Boş geçilemez</span>
+     <button type="submit" >Gönder</button>
+   </form>
+<hr>

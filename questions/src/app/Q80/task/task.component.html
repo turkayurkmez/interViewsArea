@@ -1,1 +1,7 @@
-<p>task works!</p>
+<ul *ngFor="let task of tasks">
+    <li>
+        <input [(ngModel)]="task.isDone" type="checkbox" name="" id="">
+        {{task.name}} - {{task.isDone}}
+    </li>
+</ul>
+
