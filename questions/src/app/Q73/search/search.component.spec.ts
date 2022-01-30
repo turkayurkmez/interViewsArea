@@ -23,7 +23,7 @@ describe('SearchComponent', () => {
     fixture.detectChanges();
   });
 
-  it('it is two way binding', () => {
+  it('when component member changed, input element value changed', () => {
     const inputElement: HTMLInputElement = fixture.nativeElement.querySelector('#search');
     expect(inputElement).toBeTruthy();
     expect(component.searchString).toEqual('');
@@ -39,7 +39,7 @@ describe('SearchComponent', () => {
     });
   })
 
-  it('should test two-way by setting value directly on the native element',fakeAsync(()=>{
+  it('when input element change component member has changed',fakeAsync(()=>{
      const testValue='native';
      let inputElement : HTMLInputElement = fixture.debugElement.query(By.css('#search')).nativeElement;
      inputElement.value = testValue;

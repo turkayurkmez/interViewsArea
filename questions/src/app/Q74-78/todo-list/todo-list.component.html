@@ -3,7 +3,7 @@
 <input #item type="text" id="newItem">
 <button (click)="addNewItem(item.value)" >Add New Item</button>
 <h4>There are a total of <span id="itemCount">{{getInCompletedTaskCount}}</span> unfinished tasks.</h4>
-<ul *ngFor="let item of todoItems">
+<ul id="todos" *ngFor="let item of todoItems" class="todoItem">
     <li>
        {{item.name}} <input type="checkbox" [(ngModel)]="item.isDone"> 
        <span id="state" [ngClass]="item.isDone ? 'green':'red'">{{ item.isDone ? "Done":"Undone" }}</span>

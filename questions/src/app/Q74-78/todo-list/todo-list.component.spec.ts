@@ -1,4 +1,6 @@
+import { DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { TodoListComponent } from './todo-list.component';
 
@@ -22,4 +24,12 @@ describe('TodoListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('items of todoItems[] array showing in template',()=>{
+    //find ul element
+    fixture.detectChanges();
+    const el:DebugElement[] = fixture.debugElement.queryAll(By.css('.todoItem'));
+    expect(el.length).toEqual(3);   
+    
+  });
+
 });
